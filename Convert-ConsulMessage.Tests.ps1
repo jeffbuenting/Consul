@@ -44,7 +44,7 @@ Describe "Convert-ConsulMessage" {
 
     Context "Output" {
 
-        $Message = '2017/06/28 08:11:04 [INFO] raft: Node at 192.168.0.65:8300 [Candidate] entering Candidate state in term 283415' | Convert-ConsulMessage -verbose
+        $Message = '2017/06/28 08:11:04 [INFO] raft: Node at 192.168.0.65:8300 [Candidate] entering Candidate state in term 283415' | Convert-ConsulMessage
 
         It "Returns a custom object" {
             $Message | Should BeOfType PSCustomObject
